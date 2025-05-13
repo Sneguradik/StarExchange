@@ -1,0 +1,24 @@
+@use "./variables" as *;
+
+body{
+  font-size: 8px;
+  @include font-family;
+  margin: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+*{
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+}
+h1{@include h1;}
+h2{@include h2;}
+h3{@include h3;}
+h4{@include h4;}
+h5{@include h5;}
+h6{@include h6;}
+small{@include small;}

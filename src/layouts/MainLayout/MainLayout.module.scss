@@ -1,0 +1,14 @@
+.layout {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+
+
+}
+.content_wrapper{
+  width: 100%;
+  flex-grow: 1;
+}
