@@ -15,7 +15,7 @@ export default function MainNav() {
         <RiExchangeFill />
         <small>Exchange</small>
       </Link>
-      <Link to={"/ref"} className={styles.nav_item}>
+      <Link to={"/referrals"} className={styles.nav_item}>
         <BsFillPeopleFill />
         <small>Referrals</small>
       </Link>

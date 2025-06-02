@@ -31,24 +31,27 @@ export default function ThemeProvider({
     () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
   )
 
+
+
   themeParams.mountSync()
   const tp = useSignal(themeParams.isDark)
   const tgBackground = useSignal(themeParams.backgroundColor)
 
-
+  useEffect(() => {
+    const systemTheme = tp?"dark" : "light";
+    setTheme(systemTheme);
+  }, [tp]);
+  
   useEffect(() => {
     const root = window.document.documentElement;
 
     root.classList.remove("light", "dark")
-
-    const systemTheme = tp?"dark" : "light";
-    setTheme(systemTheme);
-    root.classList.add(systemTheme)
-    if(tgBackground) root.style.setProperty("--background", tgBackground);
+    
+    root.classList.add(theme)
+    if(tgBackground) root.style.setProperty("--tg-background", tgBackground);
     return
 
-  }, [theme, tp, tgBackground]);
-
+  }, [tgBackground, theme]);
 
 
   const value = {

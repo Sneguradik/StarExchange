@@ -1,0 +1,52 @@
+@use "/src/styles/variables" as *;
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+.profile{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr 1fr;
+  width: fit-content;
+  column-gap: 1rem;
+  align-items: center;
+
+  &>img{
+    aspect-ratio: 1/1;
+    grid-row: span 2;
+    border-radius: 50%;
+    height: 3rem;
+  }
+}
+.settings_list{
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--muted);
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: var(--radius);
+}
+.settings_item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: .25rem;
+  font-weight: 500;
+
+  @include default-transition;
+  cursor: pointer;
+
+  border-radius: var(--radius);
+
+  &>svg{
+    color: var(--button_color);
+  }
+
+
+}

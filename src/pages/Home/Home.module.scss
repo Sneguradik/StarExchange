@@ -1,8 +1,57 @@
+@use "/src/styles/variables" as *;
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  overflow: auto;
+}
+
 .wallet{
   display: flex;
-  background-color: var(--foreground);
-  color: var(--background);
   padding: 1rem;
   border-radius: 0 0 1rem 1rem;
   flex-direction: column;
+  align-items: center;
+}
+
+.operations{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem 2rem;
+  //background-color: var(--button_color);
+  width: fit-content;
+  border-radius: var(--radius);
+}
+
+.operation_btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  gap: .5rem;
+  cursor: pointer;
+  @include default-transition;
+  color: var(--muted-foreground);
+  &>h5{
+    color: var(--accent_text_color);
+  }
+
+  &:hover{
+    text-decoration: underline;
+    color: var(--accent_text_color);
+  }
+}
+
+.wallets{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  border-radius: var(--radius);
+
 }

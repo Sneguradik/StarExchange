@@ -1,0 +1,17 @@
+@use "/src/styles/variables" as *;
+
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+.copy_btn{
+  background-color: var(--accent_text_color);
+}
+
+.ref_section{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
